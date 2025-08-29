@@ -1,27 +1,62 @@
-import React from "react";
+import Hero from "../components/Hero";
+import { Link } from "react-router-dom";
+import { User, Factory, Cog, Camera } from "lucide-react";
 
-const Beranda = () => {
+const highlights = [
+  {
+    icon: User,
+    title: "Tentang Program",
+    desc: "Pengelola, latar belakang, dan kegiatan utama budidaya ikan",
+    link: "/tentang-kami",
+    color: "from-sky-500 to-teal-400",
+  },
+  {
+    icon: Factory,
+    title: "Infrastruktur",
+    desc: "Pemasangan listrik & mesin pengolah pakan modern",
+    link: "/infrastruktur",
+    color: "from-rose-500 to-pink-400",
+  },
+  {
+    icon: Cog,
+    title: "Kegiatan",
+    desc: "Efisiensi budidaya ikan dengan dukungan teknologi",
+    link: "/aktivitas",
+    color: "from-indigo-500 to-purple-400",
+  },
+  {
+    icon: Camera,
+    title: "Dokumentasi",
+    desc: "Dokumentasi proses budidaya dan hasil produksi",
+    link: "/dokumentasi",
+    color: "from-emerald-500 to-lime-400",
+  },
+];
+
+export default function Beranda() {
   return (
-    <section
-      className="relative w-full h-screen bg-cover bg-center flex items-center justify-center"
-      style={{ backgroundImage: "url('/asset/Infrastruktur1.jpg')" }}
-    >
-      {/* Overlay agar teks tetap jelas */}
-      <div className="absolute inset-0 bg-black/40"></div>
+    <div>
+      {/* Hero Section */}
+      <Hero />
 
-      <div className="relative z-10 bg-white/80 p-8 rounded-2xl shadow-lg max-w-2xl text-center">
-        <h1 className="text-4xl font-bold text-blue-800 mb-4">
-          Selamat Datang di Website Pereng Mina
-        </h1>
-        <p className="text-lg text-gray-700">
-          Website ini merupakan sistem informasi yang mendokumentasikan kegiatan
-          pengelolaan ikan dari Kelompok Pereng Mina. Kami berkomitmen untuk
-          meningkatkan kualitas produksi, infrastruktur, dan transparansi
-          dokumentasi dalam pengelolaan ikan.
-        </p>
-      </div>
-    </section>
+      {/* Highlights Section */}
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center">
+          {highlights.map((item, idx) => (
+            <Link
+              key={idx}
+              to={item.link}
+              className={`w-full max-w-sm rounded-3xl p-8 text-white shadow-2xl transform transition hover:-translate-y-2 hover:shadow-3xl bg-gradient-to-br ${item.color}`}
+            >
+              <div className="flex flex-col items-center text-center">
+                <item.icon className="w-16 h-16 mb-6" />
+                <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+                <p className="text-gray-100 text-sm">{item.desc}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </div>
   );
-};
-
-export default Beranda;
+}
