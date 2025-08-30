@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, X, Fish, Home, User, Cog, Camera } from "lucide-react";
+import { Menu, X, CalendarCheck, Home, User, Cog, Camera } from "lucide-react";
 
 const navItems = [
   { label: "Beranda", to: "/", icon: Home },
   { label: "Tentang Program", to: "/tentang-kami", icon: User },
   { label: "Infrastruktur", to: "/infrastruktur", icon: Cog },
-  { label: "Pengelolaan", to: "/aktivitas", icon: Fish },
+  { label: "Kegiatan", to: "/aktivitas", icon: CalendarCheck },
   { label: "Dokumentasi", to: "/dokumentasi", icon: Camera },
 ];
 
@@ -25,7 +25,7 @@ export default function Navbar() {
       className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
         active
           ? "bg-white shadow-md"
-          : "bg-transparent text-white"
+          : "bg-from-sky-500 to-teal-400"
       }`}
     >
       <div className="w-full px-6">
@@ -56,7 +56,7 @@ export default function Navbar() {
               active ? "text-neutral-900" : "text-white"
             }`}
           >
-            Pereng Mina
+          
           </h1>
 
           {/* Menu Desktop */}

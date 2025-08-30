@@ -23,7 +23,7 @@ export default function Hero() {
         </p>
 
         <Link
-          to="/tentang-kami"
+          to="/aktivitas"
           className="inline-flex items-center bg-sky-500 hover:bg-sky-600 px-6 py-3 rounded-full font-semibold shadow-lg transition"
         >
           Lihat Kegiatan
