@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, X, Fish, Home, User, Cog, Camera } from "lucide-react";
+import { Menu, X, CalendarCheck, Home, User, Cog, Camera } from "lucide-react";
 
 const navItems = [
   { label: "Beranda", to: "/", icon: Home },
   { label: "Tentang Program", to: "/tentang-kami", icon: User },
   { label: "Infrastruktur", to: "/infrastruktur", icon: Cog },
-  { label: "Pengelolaan", to: "/aktivitas", icon: Fish },
+  { label: "Kegiatan", to: "/aktivitas", icon: CalendarCheck },
   { label: "Dokumentasi", to: "/dokumentasi", icon: Camera },
 ];
 
@@ -25,7 +25,7 @@ export default function Navbar() {
       className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
         active
           ? "bg-white shadow-md"
-          : "bg-transparent text-white"
+          : "bg-[#008B8B]"
       }`}
     >
       <div className="w-full px-6">
@@ -35,8 +35,8 @@ export default function Navbar() {
             <div
               className={`w-10 h-10 rounded-md flex items-center justify-center font-bold transition-all ${
                 active
-                  ? "bg-gradient-to-br from-sky-500 to-teal-500 text-white"
-                  : "bg-white text-sky-600"
+                  ? "bg-[#008B8B] text-white"
+                  : "bg-white text-[#008B8B]"
               }`}
             >
               PM
@@ -56,7 +56,6 @@ export default function Navbar() {
               active ? "text-neutral-900" : "text-white"
             }`}
           >
-            Pereng Mina
           </h1>
 
           {/* Menu Desktop */}
@@ -69,10 +68,10 @@ export default function Navbar() {
                   `text-lg flex items-center gap-1 whitespace-nowrap transition-colors ${
                     isActive
                       ? active
-                        ? "text-sky-600 font-semibold"
+                        ? "text-[#008B8B] font-semibold"
                         : "text-white font-semibold"
                       : active
-                      ? "text-gray-700 hover:text-sky-600"
+                      ? "text-gray-700 hover:text-[#008B8B]"
                       : "text-gray-200 hover:text-white"
                   }`
                 }
@@ -90,7 +89,7 @@ export default function Navbar() {
               aria-label="Toggle menu"
               className={`p-2 rounded-md transition-colors ${
                 active
-                  ? "text-gray-700 hover:text-sky-600"
+                  ? "text-gray-700 hover:text-[#008B8B]"
                   : "text-white hover:text-gray-200"
               }`}
             >
@@ -121,10 +120,10 @@ export default function Navbar() {
                     `flex items-center gap-3 px-4 py-3 rounded-lg text-base transition-colors ${
                       isActive
                         ? active
-                          ? "bg-sky-50 text-sky-600 font-semibold"
+                          ? "bg-cyan-50 text-[#008B8B] font-semibold"
                           : "bg-white/20 text-white font-semibold"
                         : active
-                        ? "hover:bg-sky-50 hover:text-sky-600"
+                        ? "hover:bg-cyan-50 hover:text-[#008B8B]"
                         : "hover:bg-white/20 hover:text-white"
                     }`
                   }

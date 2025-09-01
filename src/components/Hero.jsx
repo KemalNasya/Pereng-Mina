@@ -23,8 +23,8 @@ export default function Hero() {
         </p>
 
         <Link
-          to="/tentang-kami"
-          className="inline-flex items-center bg-sky-500 hover:bg-sky-600 px-6 py-3 rounded-full font-semibold shadow-lg transition"
+          to="/aktivitas"
+          className="inline-flex items-center bg-[#008B8B] hover:bg-[#006666] px-6 py-3 rounded-full font-semibold shadow-lg transition"
         >
           Lihat Kegiatan
           <ArrowRight className="ml-2 w-5 h-5" />
