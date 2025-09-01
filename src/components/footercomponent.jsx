@@ -3,7 +3,7 @@ import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-sky-700 to-teal-600 text-white mt-16">
+    <footer className="bg-[#080B8B] text-white mt-16">
       <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
         {/* Kolom 1 */}
         <div>
@@ -57,4 +57,3 @@ export default function Footer() {
     </footer>
   );
 }
-

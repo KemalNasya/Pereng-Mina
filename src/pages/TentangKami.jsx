@@ -1,5 +1,7 @@
 import { Users, Target, Handshake } from "lucide-react";
 
+
+
 export default function TentangKami() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
@@ -7,8 +9,8 @@ export default function TentangKami() {
         
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-blue-800 mb-6">Tentang Kami</h1>
-          <p className="text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+          <h1 className="text-3xl font-bold text-blue-800 mb-6">Tentang Kami</h1>
+          <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
             Kelompok Budidaya Ikan Pereng Mina - Inovasi dan Teknologi dalam Budidaya Ikan Modern
           </p>
         </div>
@@ -29,8 +31,8 @@ export default function TentangKami() {
 
           {/* Deskripsi */}
           <div className="bg-white p-8 rounded-xl shadow-md">
-            <h2 className="text-3xl font-semibold text-blue-700 mb-6">Profil Pereng Mina</h2>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            <h2 className="text-2xl font-semibold text-blue-700 mb-6">Profil Pereng Mina</h2>
+            <p className="text-base text-gray-700 mb-8 leading-relaxed">
               <b>Kelompok Budidaya Ikan Pereng Mina</b> merupakan kelompok masyarakat 
               yang bergerak dalam bidang perikanan di bawah binaan Universitas AKPRIND Indonesia. 
               Kami fokus pada peningkatan kualitas budidaya ikan dengan memanfaatkan teknologi modern 
@@ -47,10 +49,10 @@ export default function TentangKami() {
           {/* Visi */}
           <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-500">
             <div className="flex items-center gap-4 mb-4">
-              <Target className="w-10 h-10 text-blue-700" />
-              <h3 className="text-2xl font-semibold text-blue-800">Visi</h3>
+              <Target className="w-8 h-8 text-blue-700" />
+              <h3 className="text-xl font-semibold text-blue-800">Visi</h3>
             </div>
-            <p className="text-gray-700 text-lg">
+            <p className="text-gray-700 text-base">
               Menjadi kelompok budidaya ikan yang berdaya saing tinggi, berkelanjutan, 
               dan mampu meningkatkan kesejahteraan masyarakat sekitar.
             </p>
@@ -59,10 +61,10 @@ export default function TentangKami() {
           {/* Misi */}
           <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-green-500">
             <div className="flex items-center gap-4 mb-4">
-              <Users className="w-10 h-10 text-green-700" />
-              <h3 className="text-2xl font-semibold text-blue-800">Misi</h3>
+              <Users className="w-8 h-8 text-green-700" />
+              <h3 className="text-xl font-semibold text-blue-800">Misi</h3>
             </div>
-            <ul className="text-gray-700 text-lg space-y-3">
+            <ul className="text-gray-700 text-base space-y-2">
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">•</span>
                 Mengembangkan budidaya ikan dengan teknologi ramah lingkungan.
@@ -85,10 +87,10 @@ export default function TentangKami() {
           {/* Nilai & Komitmen */}
           <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-purple-500">
             <div className="flex items-center gap-4 mb-4">
-              <Handshake className="w-10 h-10 text-purple-700" />
-              <h3 className="text-2xl font-semibold text-blue-800">Nilai & Komitmen</h3>
+              <Handshake className="w-8 h-8 text-purple-700" />
+              <h3 className="text-xl font-semibold text-blue-800">Nilai & Komitmen</h3>
             </div>
-            <p className="text-gray-700 text-lg">
+            <p className="text-gray-700 text-base">
               Kami berkomitmen pada kualitas, transparansi, dan keberlanjutan lingkungan. 
               Dengan semangat kebersamaan, Pereng Mina terus berinovasi untuk menjadi 
               contoh kelompok budidaya ikan yang profesional dan mandiri.
@@ -100,24 +102,24 @@ export default function TentangKami() {
 
         {/* Pencapaian */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-          <h2 className="text-4xl font-semibold text-blue-700 mb-8 text-center">Pencapaian Kami</h2>
+          <h2 className="text-2xl font-semibold text-blue-700 mb-8 text-center">Pencapaian Kami</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl border-2 border-blue-200">
-              <h4 className="font-semibold text-blue-800 mb-3 text-2xl">Infrastruktur Modern</h4>
-              <p className="text-gray-700 text-xl">Pengembangan sistem kelistrikan 5.500 VA untuk mendukung operasional budidaya</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-5 rounded-xl border-2 border-blue-200">
+              <h4 className="font-semibold text-blue-800 mb-2 text-lg">Infrastruktur Modern</h4>
+              <p className="text-gray-700 text-base">Pengembangan sistem kelistrikan 5.500 VA untuk mendukung operasional budidaya</p>
             </div>
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl border-2 border-blue-200">
-              <h4 className="font-semibold text-blue-800 mb-3 text-2xl">Kolam Budidaya</h4>
-              <p className="text-gray-700 text-xl">12 kolam budidaya dengan sistem penerangan cerdas dan kontrol otomatis</p>
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-5 rounded-xl border-2 border-blue-200">
+              <h4 className="font-semibold text-blue-800 mb-2 text-lg">Kolam Budidaya</h4>
+              <p className="text-gray-700 text-base">12 kolam budidaya dengan sistem penerangan cerdas dan kontrol otomatis</p>
             </div>
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl border-2 border-blue-200">
-              <h4 className="font-semibold text-blue-800 mb-3 text-2xl">Produksi Pakan</h4>
-              <p className="text-gray-700 text-xl">Mesin pengolah pakan mandiri dengan kapasitas produksi yang terus meningkat</p>
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-5 rounded-xl border-2 border-blue-200">
+              <h4 className="font-semibold text-blue-800 mb-2 text-lg">Produksi Pakan</h4>
+              <p className="text-gray-700 text-base">Mesin pengolah pakan mandiri dengan kapasitas produksi yang terus meningkat</p>
             </div>
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl border-2 border-blue-200">
-              <h4 className="font-semibold text-blue-800 mb-3 text-2xl">Dukungan Akademik</h4>
-              <p className="text-gray-700 text-xl">Binaan langsung dari Universitas AKPRIND Indonesia untuk pengembangan teknologi</p>
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-5 rounded-xl border-2 border-blue-200">
+              <h4 className="font-semibold text-blue-800 mb-2 text-lg">Dukungan Akademik</h4>
+              <p className="text-gray-700 text-base">Binaan langsung dari Universitas AKPRIND Indonesia untuk pengembangan teknologi</p>
             </div>
           </div>
         </div>

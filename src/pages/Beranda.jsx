@@ -8,28 +8,24 @@ const highlights = [
     title: "Tentang Program",
     desc: "Pengelola, latar belakang, dan kegiatan utama budidaya ikan",
     link: "/tentang-kami",
-    color: "from-sky-500 to-teal-400",
   },
   {
     icon: Factory,
     title: "Infrastruktur",
     desc: "Pemasangan listrik & mesin pengolah pakan modern",
     link: "/infrastruktur",
-    color: "from-rose-500 to-pink-400",
   },
   {
     icon: Cog,
     title: "Kegiatan",
     desc: "Efisiensi budidaya ikan dengan dukungan teknologi",
     link: "/aktivitas",
-    color: "from-indigo-500 to-purple-400",
   },
   {
     icon: Camera,
     title: "Dokumentasi",
     desc: "Dokumentasi proses budidaya dan hasil produksi",
     link: "/dokumentasi",
-    color: "from-emerald-500 to-lime-400",
   },
 ];
 
@@ -46,7 +42,7 @@ export default function Beranda() {
             <Link
               key={idx}
               to={item.link}
-              className={`w-full max-w-sm rounded-3xl p-8 text-white shadow-2xl transform transition hover:-translate-y-2 hover:shadow-3xl bg-gradient-to-br ${item.color}`}
+              className="w-full max-w-sm rounded-3xl p-8 text-white shadow-2xl transform transition hover:-translate-y-2 hover:shadow-3xl bg-[#008B8B] hover:bg-[#006666]"
             >
               <div className="flex flex-col items-center text-center">
                 <item.icon className="w-16 h-16 mb-6" />

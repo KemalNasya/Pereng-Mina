@@ -48,13 +48,13 @@ const Dokumentasi = () => {
   const navigateImage = (direction) => {
     const currentIndex = images.findIndex(img => img.src === selectedImage.src);
     let newIndex;
-    
+
     if (direction === 'next') {
       newIndex = (currentIndex + 1) % images.length;
     } else {
       newIndex = (currentIndex - 1 + images.length) % images.length;
     }
-    
+
     setSelectedImage(images[newIndex]);
   };
 
@@ -90,10 +90,10 @@ const Dokumentasi = () => {
           </p>
         </div>
 
-        {/* Video Section - Diperbesar */}
+        {/* Video Section - Full */}
         <div className="mb-16 bg-white rounded-xl shadow-lg p-6">
           <h2 className="text-3xl font-semibold text-blue-800 mb-6 text-center">Video Dokumentasi</h2>
-          <div className="rounded-xl overflow-hidden shadow-lg w-full mx-auto">
+          <div className="rounded-xl overflow-hidden shadow-lg w-full max-w-6xl mx-auto">
             <div className="relative pb-[56.25%] h-0"> {/* 16:9 Aspect Ratio */}
               <video 
                 className="absolute top-0 left-0 w-full h-full"
@@ -113,40 +113,40 @@ const Dokumentasi = () => {
           </div>
         </div>
 
-        {/* Gallery Section */}
+        {/* Gallery Section - Full */}
         <div className="mb-16">
           <h2 className="text-3xl font-semibold text-blue-800 mb-8 text-center">Galeri Foto Kegiatan</h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {images.map((image, index) => (
               <div 
                 key={index} 
                 className="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer"
                 onClick={() => openLightbox(image)}
               >
-                <div className="h-56 overflow-hidden">
+                <div className="h-80 overflow-hidden"> {/* full size */}
                   <img 
                     src={image.src} 
                     alt={image.title}
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-blue-800 mb-2">{image.title}</h3>
-                  <p className="text-gray-600 text-sm">{image.desc}</p>
+                <div className="p-5">
+                  <h3 className="font-semibold text-blue-800 text-lg mb-2">{image.title}</h3>
+                  <p className="text-gray-600 text-base">{image.desc}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Lightbox Modal */}
+        {/* Lightbox Modal - Full */}
         {selectedImage && (
           <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
-            <div className="relative max-w-4xl w-full max-h-full">
+            <div className="relative max-w-7xl w-full max-h-full">
               {/* Close Button */}
               <button 
-                className="absolute top-4 right-4 z-10 text-white text-3xl bg-red-600 hover:bg-red-700 rounded-full w-10 h-10 flex items-center justify-center"
+                className="absolute top-4 right-4 z-10 text-white text-3xl bg-red-600 hover:bg-red-700 rounded-full w-12 h-12 flex items-center justify-center"
                 onClick={closeLightbox}
               >
                 &times;
@@ -154,14 +154,14 @@ const Dokumentasi = () => {
               
               {/* Navigation Buttons */}
               <button 
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 text-white text-2xl bg-blue-800 hover:bg-blue-900 rounded-full w-10 h-10 flex items-center justify-center"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 text-white text-3xl bg-blue-800 hover:bg-blue-900 rounded-full w-12 h-12 flex items-center justify-center"
                 onClick={() => navigateImage('prev')}
               >
                 &#10094;
               </button>
               
               <button 
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 text-white text-2xl bg-blue-800 hover:bg-blue-900 rounded-full w-10 h-10 flex items-center justify-center"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 text-white text-3xl bg-blue-800 hover:bg-blue-900 rounded-full w-12 h-12 flex items-center justify-center"
                 onClick={() => navigateImage('next')}
               >
                 &#10095;
@@ -172,11 +172,11 @@ const Dokumentasi = () => {
                 <img 
                   src={selectedImage.src} 
                   alt={selectedImage.title}
-                  className="w-full h-auto max-h-[70vh] object-contain"
+                  className="w-full h-auto max-h-[95vh] object-contain"
                 />
-                <div className="p-4 bg-white">
-                  <h3 className="text-xl font-semibold text-blue-800 mb-2">{selectedImage.title}</h3>
-                  <p className="text-gray-700">{selectedImage.desc}</p>
+                <div className="p-6 bg-white">
+                  <h3 className="text-2xl font-semibold text-blue-800 mb-3">{selectedImage.title}</h3>
+                  <p className="text-gray-700 text-lg">{selectedImage.desc}</p>
                 </div>
               </div>
             </div>
