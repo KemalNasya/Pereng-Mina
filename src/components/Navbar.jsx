@@ -4,7 +4,7 @@ import { Menu, X, CalendarCheck, Home, User, Cog, Camera } from "lucide-react";
 
 const navItems = [
   { label: "Beranda", to: "/", icon: Home },
-  { label: "Tentang Program", to: "/tentang-kami", icon: User },
+  { label: "Tentang Kami", to: "/tentang-kami", icon: User },
   { label: "Infrastruktur", to: "/infrastruktur", icon: Cog },
   { label: "Kegiatan", to: "/aktivitas", icon: CalendarCheck },
   { label: "Dokumentasi", to: "/dokumentasi", icon: Camera },
@@ -15,68 +15,74 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setActive(window.scrollY > 150);
+    const handleScroll = () => setActive(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
+      className={`w-full fixed top-0 left-0 z-50 transition-all duration-500 ${
         active
-          ? "bg-white shadow-md"
-          : "bg-[#008B8B]"
+          ? "bg-white/10 backdrop-blur-md border-b border-white/10 shadow-lg"
+          : "bg-gradient-to-r from-[#001D39] to-[#0A4174]"
       }`}
     >
-      <div className="w-full px-6">
+      <div className="w-full px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-3 flex-shrink-0">
-            <div
-              className={`w-10 h-10 rounded-md flex items-center justify-center font-bold transition-all ${
-                active
-                  ? "bg-[#008B8B] text-white"
-                  : "bg-white text-[#008B8B]"
-              }`}
-            >
-              PM
+            <div className="flex items-center gap-2">
+              <div
+                className={`w-10 h-10 rounded-md flex items-center justify-center transition-all ${
+                  active ? "bg-white/20" : "bg-white/10"
+                }`}
+              >
+                <img
+                  src="/asset/UAI_FIX.png"
+                  className="w-8 h-8 object-contain"
+                  alt="Logo UAI"
+                />
+              </div>
+              <div
+                className={`w-10 h-10 rounded-md flex items-center justify-center transition-all ${
+                  active ? "bg-white/20" : "bg-white/10"
+                }`}
+              >
+                <img
+                  src="/asset/Dikti.png"
+                  className="w-8 h-8 object-contain"
+                  alt="Logo Dikti"
+                />
+              </div>
             </div>
+
+            <div className="h-6 w-px bg-white/30 mx-2 hidden sm:block"></div>
+
             <h1
-              className={`hidden md:block text-2xl font-semibold whitespace-nowrap transition-colors ${
-                active ? "text-neutral-900" : "text-white"
+              className={`text-lg font-bold whitespace-nowrap transition-colors ${
+                active ? "text-yellow-300" : "text-yellow-300"
               }`}
             >
               Pereng Mina
             </h1>
           </div>
 
-          {/* Logo di mobile */}
-          <h1
-            className={`absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 md:hidden text-lg font-semibold whitespace-nowrap transition-colors ${
-              active ? "text-neutral-900" : "text-white"
-            }`}
-          >
-          </h1>
-
           {/* Menu Desktop */}
-          <div className="hidden md:flex items-center justify-center space-x-6 flex-grow">
+          <div className="hidden md:flex items-center justify-center space-x-1 flex-grow">
             {navItems.map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
                 className={({ isActive }) =>
-                  `text-lg flex items-center gap-1 whitespace-nowrap transition-colors ${
+                  `text-sm lg:text-base flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${
                     isActive
-                      ? active
-                        ? "text-[#008B8B] font-semibold"
-                        : "text-white font-semibold"
-                      : active
-                      ? "text-gray-700 hover:text-[#008B8B]"
-                      : "text-gray-200 hover:text-white"
+                      ? "bg-white/20 text-white font-semibold shadow-md"
+                      : "text-white/80 hover:bg-white/10 hover:text-white"
                   }`
                 }
               >
-                {item.icon ? <item.icon className="w-5 h-5" /> : null}
+                {item.icon ? <item.icon className="w-4 h-4" /> : null}
                 <span>{item.label}</span>
               </NavLink>
             ))}
@@ -87,10 +93,10 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen((s) => !s)}
               aria-label="Toggle menu"
-              className={`p-2 rounded-md transition-colors ${
+              className={`p-2 rounded-md transition-all ${
                 active
-                  ? "text-gray-700 hover:text-[#008B8B]"
-                  : "text-white hover:text-gray-200"
+                  ? "bg-white/10 text-white hover:bg-white/20"
+                  : "bg-white/10 text-white hover:bg-white/20"
               }`}
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -101,34 +107,32 @@ export default function Navbar() {
 
       {/* Menu Mobile */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+        className={`md:hidden transition-all duration-500 ease-in-out overflow-hidden ${
           isOpen ? "max-h-96" : "max-h-0"
         }`}
       >
         <div
-          className={`px-6 pb-4 shadow-md transition-colors ${
-            active ? "bg-white text-gray-700" : "bg-black/50 backdrop-blur-md text-white"
+          className={`px-4 pb-4 transition-colors ${
+            active
+              ? "bg-white/10 backdrop-blur-md border-t border-white/10"
+              : "bg-gradient-to-b from-[#001D39] to-[#0A4174]"
           }`}
         >
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-1 pt-3">
             {navItems.map((item) => (
               <li key={item.to}>
                 <NavLink
                   to={item.to}
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
-                    `flex items-center gap-3 px-4 py-3 rounded-lg text-base transition-colors ${
+                    `flex items-center gap-2 px-3 py-2 rounded-md text-sm transition-all ${
                       isActive
-                        ? active
-                          ? "bg-cyan-50 text-[#008B8B] font-semibold"
-                          : "bg-white/20 text-white font-semibold"
-                        : active
-                        ? "hover:bg-cyan-50 hover:text-[#008B8B]"
-                        : "hover:bg-white/20 hover:text-white"
+                        ? "bg-white/20 text-white font-semibold shadow-md"
+                        : "text-white/80 hover:bg-white/10 hover:text-white"
                     }`
                   }
                 >
-                  {item.icon ? <item.icon className="w-5 h-5" /> : null}
+                  {item.icon ? <item.icon className="w-4 h-4" /> : null}
                   <span>{item.label}</span>
                 </NavLink>
               </li>

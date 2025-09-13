@@ -1,179 +1,137 @@
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
 
 const Activitas = () => {
   return (
-    <div className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-16">
-      <div className="max-w-7xl mx-auto space-y-24">
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Background Full Layar */}
+      <div className="fixed inset-0 bg-gradient-to-br from-[#001D39] via-[#0A4174] to-[#2A5C7A] z-0"></div>
 
-        {/* Bagian Atas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Kiri - Gambar */}
+      {/* Konten Artikel */}
+      <div className="relative z-10 max-w-6xl mx-auto py-20 px-6 lg:px-12 space-y-32">
+        {/* Bagian 1 */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+        >
           <div className="flex justify-center">
-            <img 
-              src="public/asset/Infrastrutur2.jpg" 
-              alt="eFeeder" 
-              className="w-full max-w-md object-contain"
+            <motion.img
+              src="/asset/Infrastruktur1.jpg"
+              alt="Panel Surya"
+              className="rounded-2xl shadow-2xl w-full max-w-md lg:max-w-lg object-cover aspect-video"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             />
           </div>
-          {/* Kanan - Teks */}
+
           <div>
-            <h1 className="text-4xl font-bold text-blue-800 mb-6">
-              Kelaparan Dunia Mendorong Misi Kami
+            <h1 className="text-3xl lg:text-4xl font-extrabold text-white mb-6 leading-snug">
+              Universitas AKPRIND Pasang Panel Surya untuk Komunitas Pereng Mina
             </h1>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Pada tahun 2023, sekitar 811 juta orang masih menghadapi masalah kelaparan di seluruh dunia. 
-              Bahkan sebelum pandemi melanda, data menunjukkan bahwa sekitar 660 juta orang diprediksi akan 
-              menghadapi kelaparan pada tahun 2030, dan pandemi telah secara signifikan memperburuk krisis ini.
+            <p className="text-base lg:text-lg text-blue-100 leading-relaxed mb-4">
+              Universitas AKPRIND Indonesia melaksanakan kegiatan pengabdian
+              masyarakat berupa pemasangan Panel Surya di komunitas budidaya
+              ikan Pereng Mina. Kegiatan ini bertujuan untuk mendukung kebutuhan
+              kelistrikan sekaligus meningkatkan produktivitas masyarakat
+              melalui pemanfaatan energi terbarukan.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Sebagai salah satu industri yang tumbuh paling cepat, Akuakultur dapat memainkan peran penting 
-              dalam mengatasi tantangan keamanan pangan global. Industri ini menyediakan sumber makanan akuatik 
-              yang terjangkau, andal, dan berkelanjutan, menciptakan akses yang lebih luas ke pasar di negara-negara 
-              berkembang maupun negara-negara maju.
+            <p className="text-base lg:text-lg text-blue-100 leading-relaxed">
+              Program ini merupakan salah satu bentuk implementasi Tri Dharma
+              Perguruan Tinggi. Kehadiran panel surya ini diharapkan dapat
+              menjadi solusi energi mandiri, hemat biaya, sekaligus ramah
+              lingkungan bagi komunitas Pereng Mina.
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Bagian Kedua */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Kiri - Teks */}
-          <div>
-            <h2 className="text-3xl font-bold text-blue-800 mb-6">
-              Revitalisasi Akuakultur dengan Kemajuan Teknologi
+        {/* Bagian 2 */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+        >
+          <div className="order-2 md:order-1">
+            <h2 className="text-2xl lg:text-3xl font-bold text-white mb-6 leading-snug">
+              Universitas AKPRIND Kembangkan Mesin Pengolahan Pakan Ikan
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Di eFishery, kami didorong oleh satu misi tunggal: untuk melawan kelaparan dunia dengan memanfaatkan potensi Akuakultur. 
-              Kami memanfaatkan teknologi mutakhir untuk menyediakan produk perikanan sebagai sumber utama protein hewan, memberikan 
-              tidak hanya nutrisi tetapi juga aksesibilitas bagi masyarakat di seluruh dunia.
+            <p className="text-base lg:text-lg text-blue-100 leading-relaxed mb-4">
+              Universitas AKPRIND Indonesia memperkenalkan mesin pengolahan
+              pakan ikan untuk mendukung kemandirian komunitas Pereng Mina.
+              Mesin ini dirancang untuk mencetak pelet pakan ikan dengan ukuran
+              yang dapat disesuaikan, sekaligus menekan biaya operasional
+              budidaya.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Komitmen kami untuk memberdayakan kemajuan melalui teknologi adalah inti dari revolusi Akuakultur, karena kami berusaha 
-              untuk memberikan dampak yang berarti dalam perjuangan global melawan kelaparan.
+            <p className="text-base lg:text-lg text-blue-100 leading-relaxed">
+              Proses produksi memanfaatkan bahan baku lokal yang lebih murah dan
+              efisien. Selain menghemat biaya, kualitas pakan juga dapat
+              disesuaikan dengan kebutuhan ikan sehingga mendukung pertumbuhan
+              lebih optimal.
             </p>
           </div>
-          {/* Kanan - Gambar */}
-          <div className="flex justify-center">
-            <img 
-              src="public/asset/bbb.jpg" 
-              alt="Revitalisasi Akuakultur" 
-              className="w-full max-w-md object-contain"
+
+          <div className="flex justify-center order-1 md:order-2">
+            <motion.img
+              src="/asset/Infrastruktur3.jpg"
+              alt="Mesin Pengolah Pakan Ikan"
+              className="rounded-2xl shadow-2xl w-full max-w-md lg:max-w-lg object-cover aspect-video"
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             />
           </div>
-        </div>
+        </motion.div>
 
-      {/* Bagian Atas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Kiri - Gambar */}
+        {/* Bagian 3 */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+        >
           <div className="flex justify-center">
-            <img 
-              src="public/asset/Infrastruktur1.jpg" 
-              alt="eFeeder" 
-              className="w-full max-w-md object-contain"
+            <motion.img
+              src="/asset/Excel.jpg"
+              alt="Kolam Budidaya"
+              className="rounded-2xl shadow-2xl w-full max-w-md lg:max-w-lg object-cover aspect-video"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             />
           </div>
-          {/* Kanan - Teks */}
-          <div>
-            <h1 className="text-4xl font-bold text-blue-800 mb-6">
-              Kelaparan Dunia Mendorong Misi Kami
-            </h1>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Pada tahun 2023, sekitar 811 juta orang masih menghadapi masalah kelaparan di seluruh dunia. 
-              Bahkan sebelum pandemi melanda, data menunjukkan bahwa sekitar 660 juta orang diprediksi akan 
-              menghadapi kelaparan pada tahun 2030, dan pandemi telah secara signifikan memperburuk krisis ini.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Sebagai salah satu industri yang tumbuh paling cepat, Akuakultur dapat memainkan peran penting 
-              dalam mengatasi tantangan keamanan pangan global. Industri ini menyediakan sumber makanan akuatik 
-              yang terjangkau, andal, dan berkelanjutan, menciptakan akses yang lebih luas ke pasar di negara-negara 
-              berkembang maupun negara-negara maju.
-            </p>
-          </div>
-        </div>
 
-        {/* Bagian Kedua */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Kiri - Teks */}
           <div>
-            <h2 className="text-3xl font-bold text-blue-800 mb-6">
-              Revitalisasi Akuakultur dengan Kemajuan Teknologi
+            <h2 className="text-2xl lg:text-3xl font-bold text-white mb-6 leading-snug">
+              Pelatihan Microsoft Excel untuk Administrasi Komunitas
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Di eFishery, kami didorong oleh satu misi tunggal: untuk melawan kelaparan dunia dengan memanfaatkan potensi Akuakultur. 
-              Kami memanfaatkan teknologi mutakhir untuk menyediakan produk perikanan sebagai sumber utama protein hewan, memberikan 
-              tidak hanya nutrisi tetapi juga aksesibilitas bagi masyarakat di seluruh dunia.
+            <p className="text-base lg:text-lg text-blue-100 leading-relaxed mb-4">
+              Selain panel surya dan mesin pakan ikan, tim pengabdian juga
+              menyelenggarakan pelatihan Microsoft Excel kepada salah satu
+              anggota Pereng Mina. Tujuannya untuk meningkatkan keterampilan
+              administrasi dalam pengelolaan data keuangan, pencatatan produksi,
+              hingga penyusunan laporan.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Komitmen kami untuk memberdayakan kemajuan melalui teknologi adalah inti dari revolusi Akuakultur, karena kami berusaha 
-              untuk memberikan dampak yang berarti dalam perjuangan global melawan kelaparan.
-            </p>
-          </div>
-          {/* Kanan - Gambar */}
-          <div className="flex justify-center">
-            <img 
-              src="public/asset/Infrastruktur3.jpg" 
-              alt="Revitalisasi Akuakultur" 
-              className="w-full max-w-md object-contain"
-            />
-          </div>
-        </div>
-
-      {/* Bagian Atas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Kiri - Gambar */}
-          <div className="flex justify-center">
-            <img 
-              src="public/asset/Bener.jpg" 
-              alt="eFeeder" 
-              className="w-full max-w-md object-contain"
-            />
-          </div>
-          {/* Kanan - Teks */}
-          <div>
-            <h1 className="text-4xl font-bold text-blue-800 mb-6">
-              Kelaparan Dunia Mendorong Misi Kami
-            </h1>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Pada tahun 2023, sekitar 811 juta orang masih menghadapi masalah kelaparan di seluruh dunia. 
-              Bahkan sebelum pandemi melanda, data menunjukkan bahwa sekitar 660 juta orang diprediksi akan 
-              menghadapi kelaparan pada tahun 2030, dan pandemi telah secara signifikan memperburuk krisis ini.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Sebagai salah satu industri yang tumbuh paling cepat, Akuakultur dapat memainkan peran penting 
-              dalam mengatasi tantangan keamanan pangan global. Industri ini menyediakan sumber makanan akuatik 
-              yang terjangkau, andal, dan berkelanjutan, menciptakan akses yang lebih luas ke pasar di negara-negara 
-              berkembang maupun negara-negara maju.
+            <p className="text-base lg:text-lg text-blue-100 leading-relaxed">
+              Dengan penguasaan Excel, anggota komunitas diharapkan mampu
+              menyusun administrasi yang lebih tertib, akurat, dan profesional,
+              mendukung kegiatan budidaya ikan secara berkelanjutan.
             </p>
           </div>
-        </div>
-
-     {/* Bagian Kedua */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Kiri - Teks */}
-          <div>
-            <h2 className="text-3xl font-bold text-blue-800 mb-6">
-              Revitalisasi Akuakultur dengan Kemajuan Teknologi
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Di eFishery, kami didorong oleh satu misi tunggal: untuk melawan kelaparan dunia dengan memanfaatkan potensi Akuakultur. 
-              Kami memanfaatkan teknologi mutakhir untuk menyediakan produk perikanan sebagai sumber utama protein hewan, memberikan 
-              tidak hanya nutrisi tetapi juga aksesibilitas bagi masyarakat di seluruh dunia.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Komitmen kami untuk memberdayakan kemajuan melalui teknologi adalah inti dari revolusi Akuakultur, karena kami berusaha 
-              untuk memberikan dampak yang berarti dalam perjuangan global melawan kelaparan.
-            </p>
-          </div>
-          {/* Kanan - Gambar */}
-          <div className="flex justify-center">
-            <img 
-              src="public/asset/Infrastruktur1.jpg" 
-              alt="Revitalisasi Akuakultur" 
-              className="w-full max-w-md object-contain"
-            />
-          </div>
-        </div>
-        {/* Bagian lain (Kolam, Grid, Listrik, Mesin, Excel, Manfaat) tetap sama persis seperti kode kamu */}
-        
+        </motion.div>
       </div>
     </div>
   );
