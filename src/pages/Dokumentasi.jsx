@@ -11,7 +11,7 @@ import {
 const Dokumentasi = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Data gambar dokumentasi
+  // Daftar gambar dokumentasi
   const images = [
     {
       src: "/asset/bbb.jpg",
@@ -59,7 +59,7 @@ const Dokumentasi = () => {
     setSelectedImage(images[newIndex]);
   };
 
-  // Fungsi untuk membuka Google Maps di lokasi yang tepat
+  // Fungsi untuk membuka Google Maps 
   const openGoogleMaps = () => {
     window.open(
       "https://www.google.com/maps/place/Kelompok+Pembudidaya+Ikan+Mina+Mulya/@-7.7700984,110.3183574,13.3z/data=!4m6!3m5!1s0x2e7a58778b29de29:0xfe38d7a4203f6516!8m2!3d-7.767006!4d110.3324!16s%2Fg%2F11b6rz723m?entry=ttu&g_ep=EgoyMDI1MDgzMC4wIKXMDSoASAFQAw%3D%3D",
@@ -81,7 +81,7 @@ const Dokumentasi = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Background gradient */}
+      {/* Background  */}
       <div className="fixed inset-0 bg-gradient-to-br from-[#001D39] via-[#0A4174] to-[#2A5C7A] z-0"></div>
 
       {/* Efek cahaya subtle */}
@@ -235,7 +235,7 @@ const Dokumentasi = () => {
           )}
         </AnimatePresence>
 
-        Maps Section dengan Pin yang Dapat Diklik
+       
         <motion.div
           className="mb-16 bg-white/5 rounded-xl shadow-lg p-6 backdrop-blur-sm border border-white/10"
           initial={{ opacity: 0, y: 30 }}

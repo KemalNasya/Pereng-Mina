@@ -7,7 +7,7 @@ const highlights = [
   {
     icon: User,
     title: "Tentang Kami",
-    desc: "Pengelola, latar belakang, dan kegiatan utama budidaya ikan",
+    desc: "Pengelola dan latar belakang budidaya ikan Pereng Mina",
     link: "/tentang-kami",
     color: "from-[#0A4174] to-[#49769F]",
     hoverColor: "hover:from-[#001D39] hover:to-[#0A4174]"
@@ -15,7 +15,7 @@ const highlights = [
   {
     icon: Factory,
     title: "Infrastruktur",
-    desc: "Pemasangan listrik & mesin pengolah pakan modern",
+    desc: "Inovasi dan infrastruktur budidaya ikan Pereng Mina",
     link: "/infrastruktur",
     color: "from-[#0A4174] to-[#49769F]",
     hoverColor: "hover:from-[#001D39] hover:to-[#0A4174]"
@@ -23,7 +23,7 @@ const highlights = [
   {
     icon: CalendarCheck,
     title: "Kegiatan",
-    desc: "Kegiatan Pengelolaan Budidaya Ikan",
+    desc: "Kegiatan Pengelolaan Budidaya Ikan Pereng Mina",
     link: "/aktivitas",
     color: "from-[#0A4174] to-[#49769F]",
     hoverColor: "hover:from-[#001D39] hover:to-[#0A4174]"
@@ -31,7 +31,7 @@ const highlights = [
   {
     icon: Camera,
     title: "Dokumentasi",
-    desc: "Dokumentasi proses budidaya dan hasil produksi",
+    desc: "Galeri dokumentasi Pereng Mina",
     link: "/dokumentasi",
     color: "from-[#0A4174] to-[#49769F]",
     hoverColor: "hover:from-[#001D39] hover:to-[#0A4174]"

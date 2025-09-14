@@ -36,7 +36,7 @@ const Activitas = () => {
 
           <div>
             <h1 className="text-3xl lg:text-4xl font-extrabold text-white mb-6 leading-snug">
-              Universitas AKPRIND Pasang Panel Surya untuk Komunitas Pereng Mina
+              Pemasangan Panel Surya di Komunitas Pereng Mina
             </h1>
             <p className="text-base lg:text-lg text-blue-100 leading-relaxed mb-4">
               Universitas AKPRIND Indonesia melaksanakan kegiatan pengabdian
@@ -64,7 +64,7 @@ const Activitas = () => {
         >
           <div className="order-2 md:order-1">
             <h2 className="text-2xl lg:text-3xl font-bold text-white mb-6 leading-snug">
-              Universitas AKPRIND Kembangkan Mesin Pengolahan Pakan Ikan
+              Pengembangan Mesin Pengolahan Pakan Ikan
             </h2>
             <p className="text-base lg:text-lg text-blue-100 leading-relaxed mb-4">
               Universitas AKPRIND Indonesia memperkenalkan mesin pengolahan
